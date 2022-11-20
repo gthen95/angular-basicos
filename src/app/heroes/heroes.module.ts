@@ -1,18 +1,27 @@
 import {NgModule} from '@angular/core';
+import { CommonModule } from '@angular/common';
+
 import { HeroeComponent } from './heroe/heroe.component';
 import { ListadoComponent } from './listado/listado.component';
-import { CommonModule } from '@angular/common'
+
+// En Declarations se colocan los componentes que se estan utilizando
+// En imports se colocan otros modulos
+// En export se colocan las cosas quiero que sean visibles fuera del module
+// providers Son servicios a un modulo
+// bootstrap Se coloca el componente principal
 
 @NgModule({
-    declarations: [          // Se colocan los componentes de mi modulo
+    declarations: [
         HeroeComponent,
         ListadoComponent
     ],
-    exports:[               // Cosas visibles fuera del modulo
+    exports: [
         ListadoComponent
     ],
-    imports: [              // Solo van modulos: CommonModule se utiliza cuando usa comandos *ng
-        CommonModule 
-    ]                         
+    imports:[
+        CommonModule
+    ]
 })
-export class HeroesModule {}
+export class HeroesModule{
+
+}

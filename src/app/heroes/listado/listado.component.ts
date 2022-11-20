@@ -2,16 +2,16 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-listado',
-  templateUrl: './listado.component.html'
+  templateUrl: './listado.component.html',
 })
-export class ListadoComponent  {
+export class ListadoComponent {
 
-  heroes: string[] = ['Spiderman','Ironman','Hulk','Thor','Goku'];
-  heroeEliminado:string ='';
+  heroeBorrado: string = '';
+  heroes: string[] = ['Spiderman', 'Ironman', 'Goku', 'Hulk', 'Thor']
 
-  borrarHeroe():void {
-    this.heroeEliminado = this.heroes.pop() || '';
+  borrarHeroe() {
+    this.heroeBorrado = this.heroes.pop() || '';
   }
 
-  
 }
+
